@@ -35,6 +35,7 @@ class ViewController: UIViewController {
   @IBAction func stop(_ sender: Any) {
     timer.invalidate()
     player.currentTime = 0
+    songPosition.value = 0
     player.stop()
   }
   
