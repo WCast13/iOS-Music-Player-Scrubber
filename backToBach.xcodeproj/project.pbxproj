@@ -12,6 +12,9 @@
 		3DF3F5BF1E5B6EB000EADC9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DF3F5BD1E5B6EB000EADC9A /* Main.storyboard */; };
 		3DF3F5C11E5B6EB000EADC9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DF3F5C01E5B6EB000EADC9A /* Assets.xcassets */; };
 		3DF3F5C41E5B6EB000EADC9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DF3F5C21E5B6EB000EADC9A /* LaunchScreen.storyboard */; };
+		3DF3F5CC1E5B734000EADC9A /* lukeBryan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3DF3F5CB1E5B734000EADC9A /* lukeBryan.jpg */; };
+		3DF3F5CE1E5B73A200EADC9A /* 09 Like We Ain't Ever.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3DF3F5CD1E5B73A200EADC9A /* 09 Like We Ain't Ever.mp3 */; };
+		3DF3F5D01E5B743500EADC9A /* springBreakLukeBryan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3DF3F5CF1E5B743500EADC9A /* springBreakLukeBryan.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		3DF3F5C01E5B6EB000EADC9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DF3F5C31E5B6EB000EADC9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DF3F5C51E5B6EB000EADC9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DF3F5CB1E5B734000EADC9A /* lukeBryan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lukeBryan.jpg; path = ../../Photos/lukeBryan.jpg; sourceTree = "<group>"; };
+		3DF3F5CD1E5B73A200EADC9A /* 09 Like We Ain't Ever.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "09 Like We Ain't Ever.mp3"; path = "../../../../../Music/iTunes/iTunes Media/Music/Luke Bryan/Spring Break...Checkin' Out/09 Like We Ain't Ever.mp3"; sourceTree = "<group>"; };
+		3DF3F5CF1E5B743500EADC9A /* springBreakLukeBryan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = springBreakLukeBryan.jpg; path = ../../Photos/springBreakLukeBryan.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,9 @@
 				3DF3F5BD1E5B6EB000EADC9A /* Main.storyboard */,
 				3DF3F5C01E5B6EB000EADC9A /* Assets.xcassets */,
 				3DF3F5C21E5B6EB000EADC9A /* LaunchScreen.storyboard */,
+				3DF3F5CD1E5B73A200EADC9A /* 09 Like We Ain't Ever.mp3 */,
+				3DF3F5CF1E5B743500EADC9A /* springBreakLukeBryan.jpg */,
+				3DF3F5CB1E5B734000EADC9A /* lukeBryan.jpg */,
 				3DF3F5C51E5B6EB000EADC9A /* Info.plist */,
 			);
 			path = backToBach;
@@ -125,8 +134,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DF3F5C41E5B6EB000EADC9A /* LaunchScreen.storyboard in Resources */,
+				3DF3F5CC1E5B734000EADC9A /* lukeBryan.jpg in Resources */,
 				3DF3F5C11E5B6EB000EADC9A /* Assets.xcassets in Resources */,
 				3DF3F5BF1E5B6EB000EADC9A /* Main.storyboard in Resources */,
+				3DF3F5D01E5B743500EADC9A /* springBreakLukeBryan.jpg in Resources */,
+				3DF3F5CE1E5B73A200EADC9A /* 09 Like We Ain't Ever.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

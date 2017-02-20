@@ -21,23 +21,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fj5-q4-Fdn">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="IR7-CP-Xha"/>
-                                </items>
-                            </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kd8-dI-t1D">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem systemItem="play" id="rwp-cD-jg0"/>
+                                    <barButtonItem systemItem="play" id="OpZ-Oi-hPg">
+                                        <connections>
+                                            <action selector="play2:" destination="BYZ-38-t0r" id="fyd-bv-Eno"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="FF1-Q9-mhq"/>
-                                    <barButtonItem systemItem="pause" id="EoM-s3-CVw"/>
+                                    <barButtonItem systemItem="pause" id="EoM-s3-CVw">
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" id="JTw-gg-yTO"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="UfM-zC-rkh"/>
-                                    <barButtonItem title="Stop" id="YnA-YJ-56P"/>
+                                    <barButtonItem title="Stop" id="YnA-YJ-56P">
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" id="ZwN-7n-Dhe"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H5n-um-i3M">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="springBreakLukeBryan.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="H5n-um-i3M">
                                 <rect key="frame" x="0.0" y="64" width="375" height="224"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="224" id="vpn-Hc-Lbf"/>
@@ -48,6 +54,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="Mkx-sy-9X7"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="positionSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="e2n-Ad-FoM"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVl-vy-C4r">
                                 <rect key="frame" x="158" y="338" width="58" height="21"/>
@@ -68,26 +77,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Uvs-Qk-5w9">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fj5-q4-Fdn">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Like We Ain't Ever" id="IR7-CP-Xha"/>
+                                </items>
+                            </navigationBar>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hW8-4l-nHr">
                                 <rect key="frame" x="65" y="379" width="244" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="wMs-a2-EQg"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="9Dg-tO-eKN"/>
+                                    <constraint firstAttribute="width" constant="240" id="F1m-9E-9pi"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="volumeSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="dyL-Qi-XfP"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Uvs-Qk-5w9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1kW-Y9-V93"/>
                             <constraint firstAttribute="trailing" secondItem="H5n-um-i3M" secondAttribute="trailing" id="2yy-eP-iU7"/>
                             <constraint firstItem="sS7-Ph-NIx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Q3-5T-nom"/>
                             <constraint firstItem="fj5-q4-Fdn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8mR-JG-v4O"/>
+                            <constraint firstItem="hW8-4l-nHr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="98I-vk-fzo"/>
+                            <constraint firstItem="hW8-4l-nHr" firstAttribute="top" secondItem="hVl-vy-C4r" secondAttribute="bottom" constant="20" id="Bkx-Ay-yXv"/>
                             <constraint firstItem="kd8-dI-t1D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GPq-BE-T11"/>
-                            <constraint firstItem="Uvs-Qk-5w9" firstAttribute="top" secondItem="hVl-vy-C4r" secondAttribute="bottom" constant="20" id="Hjq-G3-lbm"/>
                             <constraint firstItem="sFq-jW-HO2" firstAttribute="top" secondItem="sS7-Ph-NIx" secondAttribute="bottom" constant="8" id="LCf-yE-laz"/>
+                            <constraint firstItem="sFq-jW-HO2" firstAttribute="top" secondItem="sS7-Ph-NIx" secondAttribute="bottom" constant="8" id="NHX-sW-fNi"/>
                             <constraint firstItem="fj5-q4-Fdn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Oec-iI-vGv"/>
+                            <constraint firstItem="sS7-Ph-NIx" firstAttribute="top" secondItem="hW8-4l-nHr" secondAttribute="bottom" constant="20" id="RfR-kG-eN9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kd8-dI-t1D" secondAttribute="bottom" id="X63-uK-pwl"/>
                             <constraint firstItem="hVl-vy-C4r" firstAttribute="top" secondItem="H5n-um-i3M" secondAttribute="bottom" constant="50" id="XMs-CY-p3n"/>
-                            <constraint firstItem="sS7-Ph-NIx" firstAttribute="top" secondItem="Uvs-Qk-5w9" secondAttribute="bottom" constant="20" id="YRu-OR-ZX7"/>
                             <constraint firstItem="H5n-um-i3M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="c2x-de-wQY"/>
                             <constraint firstAttribute="trailing" secondItem="fj5-q4-Fdn" secondAttribute="trailing" id="dxL-Kl-JI7"/>
                             <constraint firstItem="sFq-jW-HO2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fg6-cL-0of"/>
@@ -96,10 +116,17 @@
                             <constraint firstItem="hVl-vy-C4r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ugH-Z7-N5L"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="songPosition" destination="sFq-jW-HO2" id="BRW-Q3-zfX"/>
+                        <outlet property="volume" destination="hW8-4l-nHr" id="kOT-KU-kfV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="springBreakLukeBryan.jpg" width="900" height="506"/>
+    </resources>
 </document>
