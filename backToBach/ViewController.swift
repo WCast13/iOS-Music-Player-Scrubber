@@ -12,18 +12,29 @@ import AVFoundation
 class ViewController: UIViewController {
 
   var player = AVAudioPlayer()
+  var timer = Timer()
+  
   @IBOutlet var volume: UISlider!
   @IBOutlet var songPosition: UISlider!
   
+  func updateSongPosition() {
+    songPosition.value = Float(player.currentTime)
+  }
+  
   @IBAction func play2(_ sender: Any) {
     player.play()
+    
+    timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateSongPosition), userInfo: nil, repeats: true)
   }
   
   @IBAction func pause(_ sender: Any) {
     player.pause()
+    timer.invalidate()
   }
   
   @IBAction func stop(_ sender: Any) {
+    timer.invalidate()
+    player.currentTime = 0
     player.stop()
   }
   
@@ -32,6 +43,9 @@ class ViewController: UIViewController {
   }
   
   @IBAction func positionSliderChanged(_ sender: Any) {
+    
+    player.currentTime = TimeInterval(songPosition.value)
+    
   }
   
   override func viewDidLoad() {
@@ -42,9 +56,11 @@ class ViewController: UIViewController {
     
     do {
       try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath!))
+      songPosition.maximumValue = Float(player.duration)
     } catch {
-      print("error")
+//      error
     }
+    
   }
 
   override func didReceiveMemoryWarning() {
